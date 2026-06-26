@@ -1,8 +1,8 @@
-# Простой make-file без переменных, для релиза и дебага
+ Простой make-file без переменных, для релиза и дебага
 
 .PHONY: all debug release clean
 
-all: debug release
+all: debug release clean
 
 debug: hello-dbg
 
@@ -15,5 +15,4 @@ hello: hello.cpp
 	g++ -O2 hello.cpp -o hello -DNDEBUG -Wall
 
 clean:
-	rm -f hello 
-
+	rm -f hello hello-dbg 
